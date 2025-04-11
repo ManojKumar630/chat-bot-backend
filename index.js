@@ -25,7 +25,9 @@ app.post('/chat', async (req, res) => {
       }),
     });
 
-    const data = await response.json();
+   const data = await response.json();
+console.log("🧠 OpenRouter response:", JSON.stringify(data, null, 2)); 
+
     res.json(data);
   } catch (err) {
     console.error('Error from OpenRouter:', err);
